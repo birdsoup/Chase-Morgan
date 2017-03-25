@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="/static/styles.css"> -->
+
+    {% if title %}
+    <title>{{ title }} - Chase Morgan</title>
+    {% else %}
+    <title>Chase Morgan</title>
+    {% endif %}
+</head>
+
+<body>
+<header class="site-header">
+    <div class="container">
+        <header id="header">
+            <div class="site-title-wrapper">
+                <a class="site-logo" title="Chase Morgan" href="/index"><img src="/static/chase-morgan.jpg"
+                                                                              alt="Chase Morgan"></a>
+            </div>
+            <!--
+            <ul class="site-nav">
+                <li class="site-nav-item"><a class="" title="Home | Chase Morgan" href="/index">Home</a></li>
+            </ul> -->
+        </header>
+    </div>
+</header>
+
+<hr/>
+
+<div class="container">
+{%- with messages = get_flashed_messages() -%}
+{#- Print all message flashes in the queue -#}
+{%- if messages -%}
+{%- if 'Error' in messages[0] -%}
+    <div class="alert alert-danger">
+{%- else -%}
+    <div class="alert alert-success">
+{%- endif -%}
+
+    {%- for message in messages -%}
+    {{ message }} <br/>
+    {%- endfor -%}
+
+    </div>
+{%- endif -%}
+{%- endwith -%}
+
+{% block content %}
+{% endblock %}
+</div>
+
+</body>
+</html>

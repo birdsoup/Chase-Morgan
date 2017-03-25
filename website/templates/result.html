@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center">
+<h1> Your Result:</h1>
+</div>
+
+<div class="row text-center">
+    {# Register form #}
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <img alt="Embedded Image" src="data:image/png;base64,{{imgdata}}" />
+    </div>
+    <div class="col-sm-6"></div>
+</div>
+
+<div id="clear"></div>
+
+{% endblock %}

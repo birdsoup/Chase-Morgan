@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="jumbotron text-center">
+    <h1> Chase Morgan </h1>
+    <p> Chase Morgan allows you to generate the dankest memes!</p>
+</div>
+
+<div class="row">
+    {# Meme generation form #}
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <div class="text-center">
+            <h2>Generate a meme from keywords:</h2>
+            <form action="/from_keywords" method="get" name="from_keywords">
+                <div class="form-group">
+                    <input id="keywords" name="keywords" type="text" class="form-control"/>
+                    <input type="submit" class="btn btn-default" value="Search by keywords"/>
+                    <input type="submit" class="btn btn-default" value="I'm feeling memey!"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-6"></div>
+</div>
+
+<div id="clear"></div>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+flask
+itsdangerous
+jinja2
+requests
+flask-cors
+flask-wtf
