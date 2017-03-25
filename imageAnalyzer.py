@@ -19,6 +19,9 @@ for filename in os.listdir('memes/'):
         imageTxtFile = open("chase/"+filename+".chase","w")
         meme = Image.open("memes/"+filename)
         txt = tool.image_to_string(meme,lang=lang,builder=pyocr.builders.TextBuilder())
-        imageTxtFile.write(txt)
+        try:
+            imageTxtFile.write(txt)
+        except UnicodeEncodeError:
+            print(filename)
 
 #print(imageFeatures)
