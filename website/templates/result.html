@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="text-center">
-<h1> Your Result:</h1>
+<h1> Result for "{{keywords}}":</h1>
 </div>
 
-<div class="row text-center">
+<div class="row">
     {# Register form #}
     <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-        <img alt="Embedded Image" src="data:image/png;base64,{{imgdata}}" />
+    <div class="col-sm-6 text-center">
+        <img alt="Embedded Image" class="img-responsive center-block" src="data:image/png;base64,{{imgdata}}">
     </div>
     <div class="col-sm-6"></div>
 </div>
