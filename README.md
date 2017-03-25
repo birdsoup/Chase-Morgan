@@ -1,1 +1,1 @@
-make some memes with machine learning
+make some dankke memes with machine learning
