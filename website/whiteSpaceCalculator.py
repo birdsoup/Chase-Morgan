@@ -6,7 +6,7 @@ import pyocr
 import pyocr.builders
 
 
-def getBoxCordinates(filepath):
+def getBoxCoordinates(filepath):
         tool = pyocr.get_available_tools()[0]
         lang = tool.get_available_languages()[1]
         meme = Image.open(filepath)

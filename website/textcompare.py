@@ -20,8 +20,5 @@ def get_similar_template(keywords):
     closest = max(result)
     index = result.tolist().index(closest)
 
-    print closest, chase_contents[index]
-
     return chase_files[index]
 
-get_similar_template("meme")
