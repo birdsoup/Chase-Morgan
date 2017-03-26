@@ -1,8 +1,11 @@
 import markovify
 
-def generateMemeText():
-    with open("../corpus2.txt") as f:
+def generateMemeText(input):
+    with open("../meme_corpus.txt") as f:
         text = f.read()
-        text_model = markovify.Text(text)
-        text = text_model.make_sentence(tries=1000)
+        text_model = markovify.NewlineText(text)
+        try:
+            text = text_model.make_sentence_with_start(input)
+        except KeyError:
+            text = text_model.make_sentence(tries=100)
         return text

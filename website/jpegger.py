@@ -15,4 +15,4 @@ def jpegify(filename):
         im.save(output, format="JPEG", quality=10)
 
     img_final = Image.open(output)
-    img_final.save(filename + "_output", format="JPEG", quality=1)
+    img_final.save(filename, format="JPEG", quality=1)
