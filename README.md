@@ -1,4 +1,4 @@
-Makes memes with OCR, cosine similarity, and markov chains.
+Generates memes with OCR, cosine similarity, and markov chains.
 
 To use:
 
