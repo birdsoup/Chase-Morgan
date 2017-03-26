@@ -13,8 +13,9 @@
     <div class="col-sm-6">
         <div class="text-center">
             <h2>Generate a meme from keywords:</h2>
-            <form action="/from_keywords" method="get" name="from_keywords">
+            <form action="/from_keywords" method="post" name="from_keywords">
                 <div class="form-group">
+                {{ from_keywords.hidden_tag() }}
                     <input id="keywords" name="keywords" type="text" class="form-control"/>
                     <input type="submit" class="btn btn-default" value="Search by keywords"/>
                     <input type="submit" class="btn btn-default" value="I'm feeling memey!"/>

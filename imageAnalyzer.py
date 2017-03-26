@@ -1,18 +1,26 @@
-from PIL import Image
+from PIL import Image 
 import os
-import indicoio
 import operator
 
-indicoio.config.api_key  = 'bae2f65f53a35768c0d6c90aa1d3b37b'
+import pyocr
+import pyocr.builders
+import io
 
-imageFeaturesFile = open("imageFeatures.chase","w")
+
+tool = pyocr.get_available_tools()[0]
+lang = tool.get_available_languages()[1]
+
+
+
 memes = [Image.open("memes/"+filename) for filename in os.listdir('memes/')]#get list of meme images
 
-imageFeatures = indicoio.image_recognition(memes)
+for filename in os.listdir('memes/'):
+        imageTxtFile = open("chase/"+filename+".chase","w")
+        meme = Image.open("memes/"+filename)
+        txt = tool.image_to_string(meme,lang=lang,builder=pyocr.builders.TextBuilder())
+        try:
+            imageTxtFile.write(txt)
+        except UnicodeEncodeError:
+            print(filename)
 
 #print(imageFeatures)
-print(max(imageFeatures[0].iteritems(), key=operator.itemgetter(1))[0])
-
-
-
-
