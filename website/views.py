@@ -16,6 +16,7 @@ from whiteSpaceCalculator import getBoxCoordinates
 from markov import generateMemeText
 import StringIO
 import base64
+from jpegger import jpegify
 
 
 
@@ -73,7 +74,7 @@ def from_keywords():
 
 
 
-    text = generateMemeText()#figure out how to do text here
+    text = generateMemeText(terms)#figure out how to do text here
             #should compile a corpus of text and just markov chain a sentence
 
     char_length = 50
@@ -82,7 +83,7 @@ def from_keywords():
         draw.text((leftmost_coord, highest_coord + y_offset), text[sub_text:sub_text + char_length], (0, 0, 0), font=font)
         y_offset += char_length
     img.save(io, format="JPEG", quality=100)
-
+    jpegify(io)
 
     data = base64.b64encode(io.getvalue())
 
