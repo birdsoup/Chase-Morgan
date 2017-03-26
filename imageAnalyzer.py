@@ -10,7 +10,6 @@ import io
 tool = pyocr.get_available_tools()[0]
 lang = tool.get_available_languages()[1]
 
-final_text = []
 
 
 memes = [Image.open("memes/"+filename) for filename in os.listdir('memes/')]#get list of meme images
