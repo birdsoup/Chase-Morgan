@@ -1,3 +1,5 @@
+Originally submitted at Hack Beanpot
+-----------------------------------------------
 Generates memes with OCR, cosine similarity, and markov chains.
 
 To use:
