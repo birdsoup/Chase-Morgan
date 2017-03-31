@@ -12,6 +12,8 @@ To use:
   
  Website use:
  
-  -Enter keywords into the search bar, which are used to determine which image to use.
+  -Enter keywords into the search bar, which are used to determine which image to use, then click 'Search by keywords'.
+  
+  Alerternatively:
   
   -Click "I'm feeling memey!" to use a random image.
