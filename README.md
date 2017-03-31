@@ -1,4 +1,4 @@
-Originally submitted at Hack Beanpot
+Chase-Morgan (Originally submitted at Hack Beanpot)
 -----------------------------------------------
 Generates memes with OCR, cosine similarity, and markov chains.
 
